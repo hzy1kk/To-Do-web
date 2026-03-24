@@ -2,6 +2,9 @@ const taskBtn = document.querySelector("#taskBtn")
 const taskList = document.querySelector("#taskList")
 const taskInput = document.querySelector("#taskInput")
 
-taskBtn.addEventListener("click", function(){
-    alert("CLIQUEI !!!")
+  taskBtn.addEventListener("click", function(){
+    const li = document.createElement('li');
+    const taskInputValue = taskInput.value;
+    li.textContent = taskInputValue;
+    taskList.appendChild(li)
 })
