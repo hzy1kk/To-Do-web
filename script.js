@@ -2,15 +2,15 @@ const taskBtn = document.querySelector("#taskBtn");
 const taskList = document.querySelector("#taskList");
 const taskInput = document.querySelector("#taskInput");
 
-function addDeleteFunction(span, li) {
+function addDeleteFunction(span) {
   span.addEventListener("click", function() {
+    const li = span.parentElement;
     taskList.removeChild(li);
   });
 }
 
 document.querySelectorAll(".deleteSpan").forEach(span => {
-  const li = span.parentElement;
-  addDeleteFunction(span, li);
+  addDeleteFunction(span);
 });
 
 taskBtn.addEventListener("click", function() {
@@ -21,7 +21,7 @@ taskBtn.addEventListener("click", function() {
   const deleteSpan = document.createElement("span");
   deleteSpan.textContent = "Excluir";
   deleteSpan.className = "deleteSpan";
-  addDeleteFunction(deleteSpan, li);
+  addDeleteFunction(deleteSpan);
   li.appendChild(deleteSpan);
   taskList.appendChild(li);
   taskInput.value = "";
