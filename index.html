@@ -4,33 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TASKSDDD</title>
+    <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <style>
-        .deleteSpan {
-            margin-left: 10px;
-            padding: 2px 6px;
-            border: 1px solid red;
-            border-radius: 4px;
-            background-color: #ffe6e6;
-            color: red;
-            cursor: pointer;
-            font-size: 0.9em;
-        }
-        .deleteSpan:hover {
-            background-color: red;
-            color: white;
-        }
-    </style>
 </head>
 <body>
     <h1>Minhas Tarefas</h1>
     <input type="text" id="taskInput">
     <button id="taskBtn">Adicionar</button>
-    <ul id="taskList"> 
-        <li>
-            Lavar Louça
-            <span class="deleteSpan">Excluir</span>
-        </li>
+    <ul id="taskList">
     </ul>
+    <button id="clearAllBtn">Limpar</button>
 </body>
 </html>
