@@ -20,6 +20,15 @@ span.addEventListener("click", () => {
     span.classList.toggle("completed");
     updateCounter();
 });
+const clearCompBtn = document.createElement("button");
+clearCompBtn.innerText = "Limpar Concluídas";
+document.body.appendChild(clearCompBtn);
+
+clearCompBtn.addEventListener("click", () => {
+    const completed = document.querySelectorAll(".completed");
+    completed.forEach(task => task.parentElement.remove());
+    updateCounter();
+});
         span.innerText = taskText;
         
         li.appendChild(span);
