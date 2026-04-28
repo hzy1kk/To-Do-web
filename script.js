@@ -29,6 +29,17 @@ clearCompBtn.addEventListener("click", () => {
     completed.forEach(task => task.parentElement.remove());
     updateCounter();
 });
+const editBtn = document.createElement("button");
+editBtn.innerText = "Editar";
+
+editBtn.onclick = () => {
+    const newText = prompt("Editar tarefa:", span.innerText);
+    if (newText !== null && newText.trim() !== "") {
+        span.innerText = newText;
+    }
+};
+
+li.appendChild(editBtn);
         span.innerText = taskText;
         
         li.appendChild(span);
