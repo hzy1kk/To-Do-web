@@ -1,3 +1,140 @@
-.completed{
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --danger: #ef4444;
+    --success: #22c55e;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    background: var(--card);
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#taskBtn {
+    background-color: var(--primary);
+    color: white;
+}
+
+#taskBtn:hover {
+    background-color: var(--primary-hover);
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.secondary {
+    background-color: #f1f5f9;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    flex: 1;
+}
+
+.secondary:hover {
+    background-color: #e2e8f0;
+    color: var(--text);
+}
+
+#taskCounter {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: transform 0.1s;
+}
+
+li:hover {
+    border-color: #e2e8f0;
+}
+
+li span {
+    flex: 1;
+    cursor: pointer;
+}
+
+.completed {
     text-decoration: line-through;
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+li button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    background: transparent;
+    color: var(--primary);
+}
+
+li button:hover {
+    background: #f5f3ff;
 }

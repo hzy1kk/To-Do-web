@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TASKSDDD</title>
+    <title>Minhas Tarefas</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Minhas Tarefas</h1>
-    <input type="text" id="taskInput">
-    <button id="taskBtn">Adicionar</button>
-    <ul id="taskList">
-    </ul>
-    <button id="clearAllBtn">Limpar</button>
-    <p id="taskCounter">0 de 0 tarefas concluídas</p>
+    <div class="container">
+        <h1>Minhas Tarefas</h1>
+        
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="O que precisa ser feito?">
+            <button id="taskBtn">Adicionar</button>
+        </div>
+
+        <div class="actions">
+            <button id="clearAllBtn" class="secondary">Limpar Tudo</button>
+            <button id="clearCompletedBtn" class="secondary">Limpar Concluídas</button>
+        </div>
+
+        <p id="taskCounter">0 de 0 tarefas concluídas</p>
+
+        <ul id="taskList"></ul>
+    </div>
 </body>
 </html>
